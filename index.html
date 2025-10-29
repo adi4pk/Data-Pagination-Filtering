@@ -9,6 +9,55 @@
 </head>
 <body>
 
+
+  <div class="modal-wrapper hide">
+        <div class="modal">
+          <div class="name-section">
+            <div class="first">
+              <p>First name</p>
+              <input type="textbox" class="first-box">
+            </div>
+            
+            <div class="last">
+              <p>Last Name</p>
+              <input type="textbox" class="last-box">
+            </div>
+            
+          </div>
+          
+          <p>email</p>
+          <input type="email" class="email-box">
+          <p>date of birth</p>
+          <div class="button-section">
+            <button class="saveStd btn">add student</button>
+            <button class="discardStd btn">discard</button>
+          </div>
+          
+         
+
+
+        </div>
+  </div>
+
+  <div class="student-modal-container hide">
+    <button class="left-arrow arrow">←</button>
+    <div class="student-modal">
+      
+      <div class="name-section name-student">
+            
+              <p class="std-first">First name</p>
+              <p class="std-last">Last Name</p>
+            
+      </div>
+          
+          <p class="std-email">Email: </p>
+          <p class="std-joindate">Joined in: </p>
+    </div>
+    <button class="right-arrow arrow">→</button>
+
+  </div>
+
+
   <div class="page">
 
     <header class="header">
@@ -18,6 +67,7 @@
         
           EXAMPLE - Search form: -->
 
+      <p class="add-student-btn">Add Student</p>
           <label for="search" class="student-search">
             <input id="search" placeholder="Search by name...">
             <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
@@ -26,6 +76,8 @@
         
 
     </header>
+
+    
     
     <ul class="student-list">
 

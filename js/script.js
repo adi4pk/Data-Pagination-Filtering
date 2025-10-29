@@ -89,3 +89,65 @@ function attachButtons(perPagina){
      btnList.appendChild(createButton(i));
   }
 }
+
+function saveCard(){
+  // let card = document.createElement("li");
+  let firstName = document.querySelector(".first-box");
+  let lastName = document.querySelector(".last-box");
+  let email = document.querySelector(".email-box");
+
+  
+  let newStudent = {
+      name: {
+        title: "", // optional
+        first: firstName.value,
+        last: lastName.value,
+      },
+      email: email.value,
+      registered: {
+        date: "02-24-2006",
+        // age: 21
+      },
+      picture: {
+        large: "https://randomuser.me/api/portraits/lego/1.jpg",
+        medium: "",
+        thumbnail: "",
+      },
+    };
+
+
+
+  firstName.value = "";
+  lastName.value = "";
+  email.value ="";
+  return newStudent;
+}
+
+
+function studentModal (student){
+  let studentModal = document.createElement("div");
+  studentModal.classList.add("student-modal-container");
+  studentModal.innerHTML=` <div class="student-modal">
+                              <div class="name-section">
+                                    
+                                      <p>${student.name.first}</p>
+                                      <p>${student.name.last}</p>
+                                    
+                                  </div>
+                          </div>`
+
+firstNameField.textContent=student.name.first;
+lastNameField.textContent=student.name.last;
+emailField.textContent= `Email: ${student.email}`;
+joindate.textContent= `Joined in ${student.registered.date}`;
+
+document.body.append(student);
+}
+
+
+function updateModal(index){
+  if (index >= 0 && index < data.length){
+    currentStudentIndex = index;
+    studentModal(data[index]);
+  }
+}
