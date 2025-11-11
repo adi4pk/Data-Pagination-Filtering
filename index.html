@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -7,78 +8,124 @@
   <link href="css/reset.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
+
 <body>
+  <!-- <div class="std-display-modal-container">
+    <button class="modal-left-arrow modal-arrow">←</button>
+    <div class="display-student-modal">
 
+      <div class="name-section name-student">
 
+        <h1 class="std-first">First name</h1>
+        <h1 class="std-last">Last Name</h1>
+
+      </div>
+
+      <p class="std-email">Email: </p>
+      <p class="std-joindate">Joined in: </p>
+    </div>
+    <button class="modal-right-arrow modal-arrow">→</button>
+
+  </div> -->
   <div class="modal-wrapper hide">
-        <div class="modal">
-          <div class="name-section">
-            <div class="first">
-              <p>First name</p>
-              <input type="textbox" class="first-box">
-            </div>
-            
-            <div class="last">
-              <p>Last Name</p>
-              <input type="textbox" class="last-box">
-            </div>
-            
-          </div>
-          
-          <p>email</p>
-          <input type="email" class="email-box">
-          <p>date of birth</p>
-          <div class="button-section">
-            <button class="saveStd btn">add student</button>
-            <button class="discardStd btn">discard</button>
-          </div>
-          
-         
-
-
+    <div class="modal">
+      <div class="name-section">
+        <div class="first">
+          <p>First name</p>
+          <input type="textbox" class="first-box">
         </div>
+
+        <div class="last">
+          <p>Last Name</p>
+          <input type="textbox" class="last-box">
+        </div>
+
+      </div>
+
+      <p>email</p>
+      <input type="email" class="email-box">
+      <p>date of birth</p>
+      <input type="date" class="calendar-box">
+      <div class="button-section">
+        <button class="saveStd btn">add student</button>
+        <button class="discardStd btn">discard</button>
+      </div>
+
+
+
+
+    </div>
   </div>
 
   <div class="student-modal-container hide">
-    <button class="left-arrow arrow">←</button>
+    <!-- <button class="left-arrow arrow">←</button> -->
     <div class="student-modal">
-      
+
       <div class="name-section name-student">
-            
-              <p class="std-first">First name</p>
-              <p class="std-last">Last Name</p>
-            
+
+        <h1 class="std-first">First name</h1>
+        <h1 class="std-last">Last Name</h1>
+
       </div>
-          
-          <p class="std-email">Email: </p>
-          <p class="std-joindate">Joined in: </p>
+
+      <p class="std-email">Email: </p>
+      <p class="std-joindate">Joined in: </p>
+
+      <button class="close-btn-newstud">CLOSE</button>
     </div>
-    <button class="right-arrow arrow">→</button>
+    <!-- <button class="right-arrow arrow">→</button> -->
 
   </div>
+
+<!-- <div class="edit-student-modal-container hide">
+    
+  <div class="edit-student-modal">
+        <img class="avatar" src="https://randomuser.me/api/portraits/lego/1.jpg">
+        <div class="edit-name-section name-student">
+
+          <h1 class="edit-std-first">First name</h1>
+          <input type="text">
+          <h1 class="edit-std-last">Last Name</h1>
+          <input type="text">
+
+        </div>
+
+        <p class="edit-std-email">Email: </p>
+        <input type="text">
+        <p class="edit-std-joindate">Joined in: </p>
+        <input type="text">
+
+        <button class="close-btn-newstud">CLOSE</button>
+        <div class="button-section">
+          <button class="saveStd btn">add student</button>
+          <button class="discardStd btn">discard</button>
+        </div>
+  </div>
+
+</div> -->
 
 
   <div class="page">
 
     <header class="header">
       <h2>Students</h2>
-      
-        <!-- Extra Credit: Dynamically insert search form here  
+
+      <!-- Extra Credit: Dynamically insert search form here  
         
           EXAMPLE - Search form: -->
 
       <p class="add-student-btn">Add Student</p>
-          <label for="search" class="student-search">
-            <input id="search" placeholder="Search by name...">
-            <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
-          </label>
-        
-        
+      <label for="search" class="student-search">
+        <input id="search" placeholder="Search by name...">
+        <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
+      </label>
+
+
 
     </header>
 
-    
-    
+
+
     <ul class="student-list">
 
       <!-- Dynamically insert students here
@@ -97,7 +144,7 @@
         </li>
 
       -->
-        
+
     </ul>
 
     <div class="pagination">
@@ -118,10 +165,11 @@
 
       </ul>
     </div>
-    
+
   </div>
-  <script src="js/data.js"></script> 
+  <script src="js/data.js"></script>
   <script src="js/script.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>
