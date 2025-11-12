@@ -299,3 +299,36 @@ function generateEditModal(){
 function saveStudent(){
 
 };
+
+
+//functie de validare fielduri
+
+// function validateField(field){
+//   if(field.value===""){
+//     let error = document.createElement("p");
+//     error.textContent ="Please complete the mandatory field*";
+//     field.insertAdjacentElement("afterend", error);
+//     console.log(field);
+//     }
+// }
+
+function validateCard(field){
+
+    let parent = field.parentNode.parentNode;
+    let error = parent.querySelector(".error-unselected");
+    
+    if(field.value.trim()===""){
+      if(!error){
+        let error = document.createElement("p");
+        error.classList.add("error-unselected");
+        error.textContent = "Please complete the mandatory fields";
+        parent.appendChild(error);
+        }
+      return false;     // invalid
+    }else{
+        if(error){
+          error.remove();
+        }
+        return true;    // valid
+      }
+}
